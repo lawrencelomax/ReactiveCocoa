@@ -33,7 +33,7 @@
 #import "RACUnit.h"
 #import <libkern/OSAtomic.h>
 
-#import "EXPMatchers+sendValues.h"
+#import "LLReactiveMatchers.h"
 
 // Set in a beforeAll below.
 static NSError *RACSignalTestError;
@@ -1476,8 +1476,8 @@ describe(@"+merge:", ^{
 	__block RACSubject *sub2;
 	__block RACSignal *merged;
 	beforeEach(^{
-		sub1 = [RACSubject subject];
-		sub2 = [RACSubject subject];
+		sub1 = [RACReplaySubject replaySubjectWithCapacity:0];
+		sub2 = [RACReplaySubject replaySubjectWithCapacity:0];
 		merged = [RACSignal merge:@[ sub1, sub2 ].objectEnumerator];
 	});
 
@@ -1497,13 +1497,8 @@ describe(@"+merge:", ^{
 	});
 
 	it(@"should send an error if one occurs", ^{
-		__block NSError *errorReceived;
-		[merged subscribeError:^(NSError *error) {
-			errorReceived = error;
-		}];
-
 		[sub1 sendError:RACSignalTestError];
-		expect(errorReceived).to.equal(RACSignalTestError);
+		expect(merged).to.sendError(RACSignalTestError);
 	});
 
 	it(@"should complete only after both signals complete", ^{
@@ -2435,60 +2430,40 @@ describe(@"-try:", ^{
 });
 
 describe(@"-tryMap:", ^{
-	__block RACSubject *subject;
-	__block NSError *receivedError;
-	__block NSMutableArray *nextValues;
-	__block BOOL completed;
+	__block RACReplaySubject *input;
+	__block RACSignal *signal;
 	
 	beforeEach(^{
-		subject = [RACSubject subject];
-		nextValues = [NSMutableArray array];
-		completed = NO;
-		receivedError = nil;
-		
-		[[subject tryMap:^ id (NSString *value, NSError **error) {
+		input = [RACReplaySubject subject];
+		signal = [input tryMap:^ id (NSString *value, NSError **error) {
 			if (value != nil) return [NSString stringWithFormat:@"%@_a", value];
 			
 			if (error != nil) *error = RACSignalTestError;
 
 			return nil;
-		}] subscribeNext:^(id x) {
-			[nextValues addObject:x];
-		} error:^(NSError *error) {
-			receivedError = error;
-		} completed:^{
-			completed = YES;
 		}];
 	});
 	
 	it(@"should map values with the mapBlock", ^{
-		[subject sendNext:@"foo"];
-		[subject sendNext:@"bar"];
-		[subject sendNext:@"baz"];
-		[subject sendNext:@"buzz"];
-		[subject sendCompleted];
-
-		NSArray *receivedValues = [nextValues copy];
-		NSArray *expectedValues = @[ @"foo_a", @"bar_a", @"baz_a", @"buzz_a" ];
+		[input sendNext:@"foo"];
+		[input sendNext:@"bar"];
+		[input sendNext:@"baz"];
+		[input sendNext:@"buzz"];
+		[input sendCompleted];
 		
-		expect(receivedError).to.beNil();
-		expect(receivedValues).to.equal(expectedValues);
-		expect(completed).to.beTruthy();
+		expect(signal).to.complete();
+		expect(signal).sendValues(@[ @"foo_a", @"bar_a", @"baz_a", @"buzz_a" ]);
 	});
 	
 	it(@"should map values with the mapBlock, until the mapBlock returns nil", ^{
-		[subject sendNext:@"foo"];
-		[subject sendNext:@"bar"];
-		[subject sendNext:nil];
-		[subject sendNext:@"buzz"];
-		[subject sendCompleted];
+		[input sendNext:@"foo"];
+		[input sendNext:@"bar"];
+		[input sendNext:nil];
+		[input sendNext:@"buzz"];
+		[input sendCompleted];
 		
-		NSArray *receivedValues = [nextValues copy];
-		NSArray *expectedValues = @[ @"foo_a", @"bar_a" ];
-		
-		expect(receivedError).to.equal(RACSignalTestError);
-		expect(receivedValues).to.equal(expectedValues);
-		expect(completed).to.beFalsy();
+		expect(signal).to.sendValues( @[@"foo_a", @"bar_a"] );
+		expect(signal).toNot.complete();
 	});
 });
 
