@@ -33,6 +33,8 @@
 #import "RACUnit.h"
 #import <libkern/OSAtomic.h>
 
+#import "EXPMatchers+sendValues.h"
+
 // Set in a beforeAll below.
 static NSError *RACSignalTestError;
 
@@ -3146,13 +3148,8 @@ describe(@"-concat", ^{
 		[subject sendNext:completedSignal];
 		[subject sendNext:threeSignal];
 
-		NSMutableArray *values = [NSMutableArray array];
-		[[subject concat] subscribeNext:^(id x) {
-			[values addObject:x];
-		}];
-
 		NSArray *expected = @[ @1, @2, @3 ];
-		expect(values).to.equal(expected);
+		expect([subject concat]).to.sendValues(expected);
 	});
 
 	it(@"should complete only after all signals complete", ^{

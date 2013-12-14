@@ -28,6 +28,26 @@
 		1E893381171647A5009071B0 /* NSObjectRACPropertySubscribingExamples.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E893380171647A5009071B0 /* NSObjectRACPropertySubscribingExamples.m */; };
 		1EC06B17173CB04000365258 /* UIGestureRecognizer+RACSignalSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EC06B15173CB04000365258 /* UIGestureRecognizer+RACSignalSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1EC06B18173CB04000365258 /* UIGestureRecognizer+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC06B16173CB04000365258 /* UIGestureRecognizer+RACSignalSupport.m */; };
+		21BEA0EA185D123C00D8030C /* LLSignalTestRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA0D3185D123C00D8030C /* LLSignalTestRecorder.m */; };
+		21BEA0EB185D123C00D8030C /* LLSignalTestRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA0D3185D123C00D8030C /* LLSignalTestRecorder.m */; };
+		21BEA0EC185D123C00D8030C /* LLReactiveMatchersHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA0D7185D123C00D8030C /* LLReactiveMatchersHelpers.m */; };
+		21BEA0ED185D123C00D8030C /* LLReactiveMatchersHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA0D7185D123C00D8030C /* LLReactiveMatchersHelpers.m */; };
+		21BEA0EE185D123C00D8030C /* LLReactiveMatchersMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA0DA185D123C00D8030C /* LLReactiveMatchersMessages.m */; };
+		21BEA0EF185D123C00D8030C /* LLReactiveMatchersMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA0DA185D123C00D8030C /* LLReactiveMatchersMessages.m */; };
+		21BEA0F0185D123C00D8030C /* EXPMatchers+complete.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA0DD185D123C00D8030C /* EXPMatchers+complete.m */; };
+		21BEA0F1185D123C00D8030C /* EXPMatchers+complete.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA0DD185D123C00D8030C /* EXPMatchers+complete.m */; };
+		21BEA0F2185D123C00D8030C /* EXPMatchers+finish.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA0DF185D123C00D8030C /* EXPMatchers+finish.m */; };
+		21BEA0F3185D123C00D8030C /* EXPMatchers+finish.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA0DF185D123C00D8030C /* EXPMatchers+finish.m */; };
+		21BEA0F4185D123C00D8030C /* EXPMatchers+haveIdenticalErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA0E1185D123C00D8030C /* EXPMatchers+haveIdenticalErrors.m */; };
+		21BEA0F5185D123C00D8030C /* EXPMatchers+haveIdenticalErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA0E1185D123C00D8030C /* EXPMatchers+haveIdenticalErrors.m */; };
+		21BEA0F6185D123C00D8030C /* EXPMatchers+haveIdenticalEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA0E3185D123C00D8030C /* EXPMatchers+haveIdenticalEvents.m */; };
+		21BEA0F7185D123C00D8030C /* EXPMatchers+haveIdenticalEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA0E3185D123C00D8030C /* EXPMatchers+haveIdenticalEvents.m */; };
+		21BEA0F8185D123C00D8030C /* EXPMatchers+haveIdenticalValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA0E5185D123C00D8030C /* EXPMatchers+haveIdenticalValues.m */; };
+		21BEA0F9185D123C00D8030C /* EXPMatchers+haveIdenticalValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA0E5185D123C00D8030C /* EXPMatchers+haveIdenticalValues.m */; };
+		21BEA0FA185D123C00D8030C /* EXPMatchers+sendError.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA0E7185D123C00D8030C /* EXPMatchers+sendError.m */; };
+		21BEA0FB185D123C00D8030C /* EXPMatchers+sendError.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA0E7185D123C00D8030C /* EXPMatchers+sendError.m */; };
+		21BEA0FC185D123C00D8030C /* EXPMatchers+sendValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA0E9185D123C00D8030C /* EXPMatchers+sendValues.m */; };
+		21BEA0FD185D123C00D8030C /* EXPMatchers+sendValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA0E9185D123C00D8030C /* EXPMatchers+sendValues.m */; };
 		27A887D11703DC6800040001 /* UIBarButtonItem+RACCommandSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A887C81703DB4F00040001 /* UIBarButtonItem+RACCommandSupport.m */; };
 		27A887D21703DDEB00040001 /* UIBarButtonItem+RACCommandSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 27A887C71703DB4F00040001 /* UIBarButtonItem+RACCommandSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4925E806181BCC71000B2FEE /* NSControllerRACSupportSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4925E805181BCC71000B2FEE /* NSControllerRACSupportSpec.m */; };
@@ -710,6 +730,29 @@
 		1E893380171647A5009071B0 /* NSObjectRACPropertySubscribingExamples.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectRACPropertySubscribingExamples.m; sourceTree = "<group>"; };
 		1EC06B15173CB04000365258 /* UIGestureRecognizer+RACSignalSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+RACSignalSupport.h"; sourceTree = "<group>"; };
 		1EC06B16173CB04000365258 /* UIGestureRecognizer+RACSignalSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+RACSignalSupport.m"; sourceTree = "<group>"; };
+		21BEA0D2185D123C00D8030C /* LLSignalTestRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLSignalTestRecorder.h; sourceTree = "<group>"; };
+		21BEA0D3185D123C00D8030C /* LLSignalTestRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLSignalTestRecorder.m; sourceTree = "<group>"; };
+		21BEA0D4185D123C00D8030C /* LLReactiveMatchers-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LLReactiveMatchers-Prefix.pch"; sourceTree = "<group>"; };
+		21BEA0D5185D123C00D8030C /* LLReactiveMatchers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLReactiveMatchers.h; sourceTree = "<group>"; };
+		21BEA0D6185D123C00D8030C /* LLReactiveMatchersHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLReactiveMatchersHelpers.h; sourceTree = "<group>"; };
+		21BEA0D7185D123C00D8030C /* LLReactiveMatchersHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLReactiveMatchersHelpers.m; sourceTree = "<group>"; };
+		21BEA0D8185D123C00D8030C /* LLReactiveMatchersImports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLReactiveMatchersImports.h; sourceTree = "<group>"; };
+		21BEA0D9185D123C00D8030C /* LLReactiveMatchersMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLReactiveMatchersMessages.h; sourceTree = "<group>"; };
+		21BEA0DA185D123C00D8030C /* LLReactiveMatchersMessages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLReactiveMatchersMessages.m; sourceTree = "<group>"; };
+		21BEA0DC185D123C00D8030C /* EXPMatchers+complete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+complete.h"; sourceTree = "<group>"; };
+		21BEA0DD185D123C00D8030C /* EXPMatchers+complete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EXPMatchers+complete.m"; sourceTree = "<group>"; };
+		21BEA0DE185D123C00D8030C /* EXPMatchers+finish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+finish.h"; sourceTree = "<group>"; };
+		21BEA0DF185D123C00D8030C /* EXPMatchers+finish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EXPMatchers+finish.m"; sourceTree = "<group>"; };
+		21BEA0E0185D123C00D8030C /* EXPMatchers+haveIdenticalErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+haveIdenticalErrors.h"; sourceTree = "<group>"; };
+		21BEA0E1185D123C00D8030C /* EXPMatchers+haveIdenticalErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EXPMatchers+haveIdenticalErrors.m"; sourceTree = "<group>"; };
+		21BEA0E2185D123C00D8030C /* EXPMatchers+haveIdenticalEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+haveIdenticalEvents.h"; sourceTree = "<group>"; };
+		21BEA0E3185D123C00D8030C /* EXPMatchers+haveIdenticalEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EXPMatchers+haveIdenticalEvents.m"; sourceTree = "<group>"; };
+		21BEA0E4185D123C00D8030C /* EXPMatchers+haveIdenticalValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+haveIdenticalValues.h"; sourceTree = "<group>"; };
+		21BEA0E5185D123C00D8030C /* EXPMatchers+haveIdenticalValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EXPMatchers+haveIdenticalValues.m"; sourceTree = "<group>"; };
+		21BEA0E6185D123C00D8030C /* EXPMatchers+sendError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+sendError.h"; sourceTree = "<group>"; };
+		21BEA0E7185D123C00D8030C /* EXPMatchers+sendError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EXPMatchers+sendError.m"; sourceTree = "<group>"; };
+		21BEA0E8185D123C00D8030C /* EXPMatchers+sendValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+sendValues.h"; sourceTree = "<group>"; };
+		21BEA0E9185D123C00D8030C /* EXPMatchers+sendValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EXPMatchers+sendValues.m"; sourceTree = "<group>"; };
 		27A887C71703DB4F00040001 /* UIBarButtonItem+RACCommandSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+RACCommandSupport.h"; sourceTree = "<group>"; };
 		27A887C81703DB4F00040001 /* UIBarButtonItem+RACCommandSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+RACCommandSupport.m"; sourceTree = "<group>"; };
 		4925E805181BCC71000B2FEE /* NSControllerRACSupportSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSControllerRACSupportSpec.m; sourceTree = "<group>"; };
@@ -1131,6 +1174,53 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
+		21BEA0D0185D123C00D8030C /* LLReactiveMatchers */ = {
+			isa = PBXGroup;
+			children = (
+				21BEA0D1185D123C00D8030C /* Helpers */,
+				21BEA0D4185D123C00D8030C /* LLReactiveMatchers-Prefix.pch */,
+				21BEA0D5185D123C00D8030C /* LLReactiveMatchers.h */,
+				21BEA0D6185D123C00D8030C /* LLReactiveMatchersHelpers.h */,
+				21BEA0D7185D123C00D8030C /* LLReactiveMatchersHelpers.m */,
+				21BEA0D8185D123C00D8030C /* LLReactiveMatchersImports.h */,
+				21BEA0D9185D123C00D8030C /* LLReactiveMatchersMessages.h */,
+				21BEA0DA185D123C00D8030C /* LLReactiveMatchersMessages.m */,
+				21BEA0DB185D123C00D8030C /* Matchers */,
+			);
+			name = LLReactiveMatchers;
+			path = ../../external/LLReactiveMatchers/LLReactiveMatchers;
+			sourceTree = "<group>";
+		};
+		21BEA0D1185D123C00D8030C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				21BEA0D2185D123C00D8030C /* LLSignalTestRecorder.h */,
+				21BEA0D3185D123C00D8030C /* LLSignalTestRecorder.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		21BEA0DB185D123C00D8030C /* Matchers */ = {
+			isa = PBXGroup;
+			children = (
+				21BEA0DC185D123C00D8030C /* EXPMatchers+complete.h */,
+				21BEA0DD185D123C00D8030C /* EXPMatchers+complete.m */,
+				21BEA0DE185D123C00D8030C /* EXPMatchers+finish.h */,
+				21BEA0DF185D123C00D8030C /* EXPMatchers+finish.m */,
+				21BEA0E0185D123C00D8030C /* EXPMatchers+haveIdenticalErrors.h */,
+				21BEA0E1185D123C00D8030C /* EXPMatchers+haveIdenticalErrors.m */,
+				21BEA0E2185D123C00D8030C /* EXPMatchers+haveIdenticalEvents.h */,
+				21BEA0E3185D123C00D8030C /* EXPMatchers+haveIdenticalEvents.m */,
+				21BEA0E4185D123C00D8030C /* EXPMatchers+haveIdenticalValues.h */,
+				21BEA0E5185D123C00D8030C /* EXPMatchers+haveIdenticalValues.m */,
+				21BEA0E6185D123C00D8030C /* EXPMatchers+sendError.h */,
+				21BEA0E7185D123C00D8030C /* EXPMatchers+sendError.m */,
+				21BEA0E8185D123C00D8030C /* EXPMatchers+sendValues.h */,
+				21BEA0E9185D123C00D8030C /* EXPMatchers+sendValues.m */,
+			);
+			path = Matchers;
+			sourceTree = "<group>";
+		};
 		5FAF525F174D4D6100CAC810 /* OS X */ = {
 			isa = PBXGroup;
 			children = (
@@ -1379,6 +1469,7 @@
 		88CDF7E315000FCF00163A9F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				21BEA0D0185D123C00D8030C /* LLReactiveMatchers */,
 				8803805B15056AD7001A5B19 /* Specta.xcodeproj */,
 				8803804815056ACA001A5B19 /* Expecta.xcodeproj */,
 				88CDF7E415000FCF00163A9F /* ReactiveCocoaTests-Info.plist */,
@@ -2203,6 +2294,8 @@
 				5FAF5240174D4D5600CAC810 /* NSObjectRACDeallocatingSpec.m in Sources */,
 				5FAF5241174D4D5600CAC810 /* NSObjectRACLiftingSpec.m in Sources */,
 				5FAF5242174D4D5600CAC810 /* NSObjectRACPropertySubscribingExamples.m in Sources */,
+				21BEA0F3185D123C00D8030C /* EXPMatchers+finish.m in Sources */,
+				21BEA0FB185D123C00D8030C /* EXPMatchers+sendError.m in Sources */,
 				5FAF5243174D4D5600CAC810 /* NSObjectRACPropertySubscribingSpec.m in Sources */,
 				5FAF5244174D4D5600CAC810 /* NSStringRACKeyPathUtilitiesSpec.m in Sources */,
 				5FAF5246174D4D5600CAC810 /* RACBacktraceSpec.m in Sources */,
@@ -2210,12 +2303,15 @@
 				5FAF5248174D4D5600CAC810 /* RACCommandSpec.m in Sources */,
 				5FAF5249174D4D5600CAC810 /* RACCompoundDisposableSpec.m in Sources */,
 				5FAF524A174D4D5600CAC810 /* RACEventSpec.m in Sources */,
+				21BEA0EF185D123C00D8030C /* LLReactiveMatchersMessages.m in Sources */,
 				5FAF524B174D4D5600CAC810 /* RACKVOWrapperSpec.m in Sources */,
 				5FAF524C174D4D5600CAC810 /* RACMulticastConnectionSpec.m in Sources */,
 				5FAF524D174D4D5600CAC810 /* RACKVOChannelSpec.m in Sources */,
 				5FAF524E174D4D5600CAC810 /* RACPropertySignalExamples.m in Sources */,
+				21BEA0FD185D123C00D8030C /* EXPMatchers+sendValues.m in Sources */,
 				5FAF524F174D4D5600CAC810 /* RACChannelExamples.m in Sources */,
 				5FAF5250174D4D5600CAC810 /* RACChannelSpec.m in Sources */,
+				21BEA0EB185D123C00D8030C /* LLSignalTestRecorder.m in Sources */,
 				5FAF5251174D4D5600CAC810 /* RACSchedulerSpec.m in Sources */,
 				5FAF5252174D4D5600CAC810 /* RACSequenceAdditionsSpec.m in Sources */,
 				5FAF5253174D4D5600CAC810 /* RACSequenceExamples.m in Sources */,
@@ -2224,6 +2320,7 @@
 				5FAF5256174D4D5600CAC810 /* RACStreamExamples.m in Sources */,
 				5FAF5257174D4D5600CAC810 /* RACSubjectSpec.m in Sources */,
 				5FAF5258174D4D5600CAC810 /* RACSubscriberExamples.m in Sources */,
+				21BEA0F7185D123C00D8030C /* EXPMatchers+haveIdenticalEvents.m in Sources */,
 				5FAF5259174D4D5600CAC810 /* RACSubscriberSpec.m in Sources */,
 				AC65FD52176DECB1005ED22B /* UIAlertViewRACSupportSpec.m in Sources */,
 				5FAF525A174D4D5600CAC810 /* RACSubscriptingAssignmentTrampolineSpec.m in Sources */,
@@ -2231,14 +2328,18 @@
 				5FAF525C174D4D5600CAC810 /* RACTupleSpec.m in Sources */,
 				5FAF525D174D4D5600CAC810 /* NSObjectRACSelectorSignalSpec.m in Sources */,
 				5FAF525E174D4D5600CAC810 /* RACSubclassObject.m in Sources */,
+				21BEA0F9185D123C00D8030C /* EXPMatchers+haveIdenticalValues.m in Sources */,
 				5FAF5262174D4D8F00CAC810 /* UIBarButtonItemRACSupportSpec.m in Sources */,
 				88302BFE1762A9E6003633BD /* RACTestExampleScheduler.m in Sources */,
 				8884DD6B1756B65300F6C379 /* RACSignalStartExamples.m in Sources */,
 				D028DB7E179E591E00D1042F /* RACSerialDisposableSpec.m in Sources */,
 				5EE9A79B1760D88500EAF5A2 /* UIButtonRACSupportSpec.m in Sources */,
 				88302C2F1762C180003633BD /* RACTargetQueueSchedulerSpec.m in Sources */,
+				21BEA0F5185D123C00D8030C /* EXPMatchers+haveIdenticalErrors.m in Sources */,
 				D0A0E227176A84DB007273ED /* RACDisposableSpec.m in Sources */,
 				D066C796176D262500C242D2 /* UIControlRACSupportSpec.m in Sources */,
+				21BEA0ED185D123C00D8030C /* LLReactiveMatchersHelpers.m in Sources */,
+				21BEA0F1185D123C00D8030C /* EXPMatchers+complete.m in Sources */,
 				D066C79D176D263D00C242D2 /* RACTestUIButton.m in Sources */,
 				D0C55CE217759559008CDDCA /* RACDelegateProxySpec.m in Sources */,
 				D07200261788C57200987F70 /* RACTestSchedulerSpec.m in Sources */,
@@ -2331,13 +2432,16 @@
 				8820937C1501C8A600796685 /* RACSignalSpec.m in Sources */,
 				889D0A8015974B2A00F833E3 /* RACSubjectSpec.m in Sources */,
 				D041376915D2281C004BBF80 /* RACKVOWrapperSpec.m in Sources */,
+				21BEA0F4185D123C00D8030C /* EXPMatchers+haveIdenticalErrors.m in Sources */,
 				D028DB7D179E591E00D1042F /* RACSerialDisposableSpec.m in Sources */,
 				882CCA1E15F1564D00937D6E /* RACCommandSpec.m in Sources */,
 				884848B615F658B800B11BD0 /* NSControlRACSupportSpec.m in Sources */,
 				88442A341608A9AD00636B49 /* RACTestObject.m in Sources */,
+				21BEA0EC185D123C00D8030C /* LLReactiveMatchersHelpers.m in Sources */,
 				88FC735B16114FFB00F8A774 /* RACSubscriptingAssignmentTrampolineSpec.m in Sources */,
 				8851A38B16161D500050D47F /* NSObjectRACPropertySubscribingSpec.m in Sources */,
 				D0D487061642651400DD7605 /* RACSequenceSpec.m in Sources */,
+				21BEA0F8185D123C00D8030C /* EXPMatchers+haveIdenticalValues.m in Sources */,
 				D0487AB3164314430085D890 /* RACStreamExamples.m in Sources */,
 				D0C70F90164337A2007027B4 /* RACSequenceAdditionsSpec.m in Sources */,
 				D0C70F93164337E3007027B4 /* RACSequenceExamples.m in Sources */,
@@ -2346,6 +2450,7 @@
 				D0C70EC616659333005AAD03 /* RACSubscriberExamples.m in Sources */,
 				D090768A17FBECBF00EB087A /* NSURLConnectionRACSupportSpec.m in Sources */,
 				D0C70EC8166595AD005AAD03 /* RACSubscriberSpec.m in Sources */,
+				21BEA0EA185D123C00D8030C /* LLSignalTestRecorder.m in Sources */,
 				8803C011166732BA00C36839 /* RACSchedulerSpec.m in Sources */,
 				881E86BA1669350B00667F7B /* RACCompoundDisposableSpec.m in Sources */,
 				D0700F4C1672994D00D7CD30 /* NSNotificationCenterRACSupportSpec.m in Sources */,
@@ -2353,19 +2458,25 @@
 				D02221621678910900DBD031 /* RACTupleSpec.m in Sources */,
 				5F7EFECF168FBC4B0037E500 /* RACChannelExamples.m in Sources */,
 				5F7EFED0168FBC4B0037E500 /* RACChannelSpec.m in Sources */,
+				21BEA0EE185D123C00D8030C /* LLReactiveMatchersMessages.m in Sources */,
+				21BEA0F6185D123C00D8030C /* EXPMatchers+haveIdenticalEvents.m in Sources */,
 				D0870C6F16884A0600D0E11D /* RACBacktraceSpec.m in Sources */,
 				88C5A02916924BFC0045EF05 /* RACMulticastConnectionSpec.m in Sources */,
 				D0EDE76716968AB10072A780 /* RACPropertySignalExamples.m in Sources */,
 				5F773DF0169B48830023069D /* NSEnumeratorRACSequenceAdditionsSpec.m in Sources */,
 				D077A172169B79A900057BB1 /* RACEventSpec.m in Sources */,
+				21BEA0FA185D123C00D8030C /* EXPMatchers+sendError.m in Sources */,
 				D0A0B01816EAA5CC00C47593 /* NSTextRACSupportSpec.m in Sources */,
 				6E58405F16F3414200F588A6 /* NSObjectRACDeallocatingSpec.m in Sources */,
 				1E893381171647A5009071B0 /* NSObjectRACPropertySubscribingExamples.m in Sources */,
+				21BEA0FC185D123C00D8030C /* EXPMatchers+sendValues.m in Sources */,
 				880D7A6616F7BB1A004A3361 /* NSObjectRACSelectorSignalSpec.m in Sources */,
 				880D7A6916F7BCC7004A3361 /* RACSubclassObject.m in Sources */,
 				5FDC350F1736F81900792E52 /* NSStringRACKeyPathUtilitiesSpec.m in Sources */,
+				21BEA0F2185D123C00D8030C /* EXPMatchers+finish.m in Sources */,
 				D075A72A17BCB7E100C24FB7 /* RACControlCommandExamples.m in Sources */,
 				88302BFD1762A9E6003633BD /* RACTestExampleScheduler.m in Sources */,
+				21BEA0F0185D123C00D8030C /* EXPMatchers+complete.m in Sources */,
 				4925E806181BCC71000B2FEE /* NSControllerRACSupportSpec.m in Sources */,
 				8884DD651756ACF600F6C379 /* RACSignalStartExamples.m in Sources */,
 				88302C2E1762C180003633BD /* RACTargetQueueSchedulerSpec.m in Sources */,
