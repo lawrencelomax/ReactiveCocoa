@@ -48,6 +48,8 @@
 		21BEA0FB185D123C00D8030C /* EXPMatchers+sendError.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA0E7185D123C00D8030C /* EXPMatchers+sendError.m */; };
 		21BEA0FC185D123C00D8030C /* EXPMatchers+sendValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA0E9185D123C00D8030C /* EXPMatchers+sendValues.m */; };
 		21BEA0FD185D123C00D8030C /* EXPMatchers+sendValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA0E9185D123C00D8030C /* EXPMatchers+sendValues.m */; };
+		21BEA105185D31BD00D8030C /* EXPMatchers+sendValuesWithCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA104185D31BD00D8030C /* EXPMatchers+sendValuesWithCount.m */; };
+		21BEA106185D31BD00D8030C /* EXPMatchers+sendValuesWithCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA104185D31BD00D8030C /* EXPMatchers+sendValuesWithCount.m */; };
 		27A887D11703DC6800040001 /* UIBarButtonItem+RACCommandSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A887C81703DB4F00040001 /* UIBarButtonItem+RACCommandSupport.m */; };
 		27A887D21703DDEB00040001 /* UIBarButtonItem+RACCommandSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 27A887C71703DB4F00040001 /* UIBarButtonItem+RACCommandSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4925E806181BCC71000B2FEE /* NSControllerRACSupportSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4925E805181BCC71000B2FEE /* NSControllerRACSupportSpec.m */; };
@@ -753,6 +755,8 @@
 		21BEA0E7185D123C00D8030C /* EXPMatchers+sendError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EXPMatchers+sendError.m"; sourceTree = "<group>"; };
 		21BEA0E8185D123C00D8030C /* EXPMatchers+sendValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+sendValues.h"; sourceTree = "<group>"; };
 		21BEA0E9185D123C00D8030C /* EXPMatchers+sendValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EXPMatchers+sendValues.m"; sourceTree = "<group>"; };
+		21BEA103185D31BD00D8030C /* EXPMatchers+sendValuesWithCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+sendValuesWithCount.h"; sourceTree = "<group>"; };
+		21BEA104185D31BD00D8030C /* EXPMatchers+sendValuesWithCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EXPMatchers+sendValuesWithCount.m"; sourceTree = "<group>"; };
 		27A887C71703DB4F00040001 /* UIBarButtonItem+RACCommandSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+RACCommandSupport.h"; sourceTree = "<group>"; };
 		27A887C81703DB4F00040001 /* UIBarButtonItem+RACCommandSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+RACCommandSupport.m"; sourceTree = "<group>"; };
 		4925E805181BCC71000B2FEE /* NSControllerRACSupportSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSControllerRACSupportSpec.m; sourceTree = "<group>"; };
@@ -1217,6 +1221,8 @@
 				21BEA0E7185D123C00D8030C /* EXPMatchers+sendError.m */,
 				21BEA0E8185D123C00D8030C /* EXPMatchers+sendValues.h */,
 				21BEA0E9185D123C00D8030C /* EXPMatchers+sendValues.m */,
+				21BEA103185D31BD00D8030C /* EXPMatchers+sendValuesWithCount.h */,
+				21BEA104185D31BD00D8030C /* EXPMatchers+sendValuesWithCount.m */,
 			);
 			path = Matchers;
 			sourceTree = "<group>";
@@ -2322,6 +2328,7 @@
 				5FAF5258174D4D5600CAC810 /* RACSubscriberExamples.m in Sources */,
 				21BEA0F7185D123C00D8030C /* EXPMatchers+haveIdenticalEvents.m in Sources */,
 				5FAF5259174D4D5600CAC810 /* RACSubscriberSpec.m in Sources */,
+				21BEA106185D31BD00D8030C /* EXPMatchers+sendValuesWithCount.m in Sources */,
 				AC65FD52176DECB1005ED22B /* UIAlertViewRACSupportSpec.m in Sources */,
 				5FAF525A174D4D5600CAC810 /* RACSubscriptingAssignmentTrampolineSpec.m in Sources */,
 				5FAF525B174D4D5600CAC810 /* RACTestObject.m in Sources */,
@@ -2456,6 +2463,7 @@
 				D0700F4C1672994D00D7CD30 /* NSNotificationCenterRACSupportSpec.m in Sources */,
 				5F2447AD167E87C50062180C /* RACKVOChannelSpec.m in Sources */,
 				D02221621678910900DBD031 /* RACTupleSpec.m in Sources */,
+				21BEA105185D31BD00D8030C /* EXPMatchers+sendValuesWithCount.m in Sources */,
 				5F7EFECF168FBC4B0037E500 /* RACChannelExamples.m in Sources */,
 				5F7EFED0168FBC4B0037E500 /* RACChannelSpec.m in Sources */,
 				21BEA0EE185D123C00D8030C /* LLReactiveMatchersMessages.m in Sources */,

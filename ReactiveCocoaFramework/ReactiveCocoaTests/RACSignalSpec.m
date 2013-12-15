@@ -850,25 +850,19 @@ describe(@"+combineLatestWith:", ^{
 	__block RACSignal *combined = nil;
 	
 	beforeEach(^{
-		subject1 = [RACSubject subject];
-		subject2 = [RACSubject subject];
+		subject1 = [RACReplaySubject subject];
+		subject2 = [RACReplaySubject subject];
 		combined = [RACSignal combineLatest:@[ subject1, subject2 ]];
 	});
 	
-	it(@"should send next only once both signals send next", ^{
-		__block RACTuple *tuple;
-		
-		[combined subscribeNext:^(id x) {
-			tuple = x;
-		}];
-		
-		expect(tuple).to.beNil();
+	it(@"should send next only once both signals send next", ^{		
+		expect(combined).to.sendValuesWithCount(0);
 
 		[subject1 sendNext:@"1"];
-		expect(tuple).to.beNil();
+		expect(combined).to.sendValuesWithCount(0);
 
 		[subject2 sendNext:@"2"];
-		expect(tuple).to.equal(RACTuplePack(@"1", @"2"));
+		expect(combined).to.sendValues(@[RACTuplePack(@"1", @"2")]);
 	});
 	
 	it(@"should send nexts when either signal sends multiple times", ^{
@@ -889,29 +883,18 @@ describe(@"+combineLatestWith:", ^{
 	});
 	
 	it(@"should complete when only both signals complete", ^{
-		__block BOOL completed = NO;
-		
-		[combined subscribeCompleted:^{
-			completed = YES;
-		}];
-
-		expect(completed).to.beFalsy();
+		expect(combined).toNot.complete();
 		
 		[subject1 sendCompleted];
-		expect(completed).to.beFalsy();
+		expect(combined).toNot.complete();
 
 		[subject2 sendCompleted];
-		expect(completed).to.beTruthy();
+		expect(combined).to.complete();
 	});
 	
 	it(@"should error when either signal errors", ^{
-		__block NSError *receivedError = nil;
-		[combined subscribeError:^(NSError *error) {
-			receivedError = error;
-		}];
-		
 		[subject1 sendError:RACSignalTestError];
-		expect(receivedError).to.equal(RACSignalTestError);
+		expect(combined).to.sendError(RACSignalTestError);
 	});
 
 	it(@"shouldn't create a retain cycle", ^{
