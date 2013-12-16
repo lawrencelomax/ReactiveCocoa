@@ -866,20 +866,15 @@ describe(@"+combineLatestWith:", ^{
 	});
 	
 	it(@"should send nexts when either signal sends multiple times", ^{
-		NSMutableArray *results = [NSMutableArray array];
-		[combined subscribeNext:^(id x) {
-			[results addObject:x];
-		}];
+		LLSignalTestRecorder *recorder = [LLSignalTestRecorder recordWithSignal:combined];
 		
 		[subject1 sendNext:@"1"];
 		[subject2 sendNext:@"2"];
 		
 		[subject1 sendNext:@"3"];
 		[subject2 sendNext:@"4"];
-		
-		expect(results[0]).to.equal(RACTuplePack(@"1", @"2"));
-		expect(results[1]).to.equal(RACTuplePack(@"3", @"2"));
-		expect(results[2]).to.equal(RACTuplePack(@"3", @"4"));
+			
+		expect(recorder).to.sendValuesIdentically(@[ RACTuplePack(@"1", @"2"), RACTuplePack(@"3", @"2"), RACTuplePack(@"3", @"4")]);
 	});
 	
 	it(@"should complete when only both signals complete", ^{
@@ -1459,24 +1454,19 @@ describe(@"+merge:", ^{
 	__block RACSubject *sub2;
 	__block RACSignal *merged;
 	beforeEach(^{
-		sub1 = [RACReplaySubject replaySubjectWithCapacity:0];
-		sub2 = [RACReplaySubject replaySubjectWithCapacity:0];
+		sub1 = [RACReplaySubject subject];
+		sub2 = [RACReplaySubject subject];
 		merged = [RACSignal merge:@[ sub1, sub2 ].objectEnumerator];
 	});
 
 	it(@"should send all values from both signals", ^{
-		NSMutableArray *values = [NSMutableArray array];
-		[merged subscribeNext:^(id x) {
-			[values addObject:x];
-		}];
-
 		[sub1 sendNext:@1];
 		[sub2 sendNext:@2];
 		[sub2 sendNext:@3];
 		[sub1 sendNext:@4];
 
 		NSArray *expected = @[ @1, @2, @3, @4 ];
-		expect(values).to.equal(expected);
+		expect(merged).to.sendValues(expected);
 	});
 
 	it(@"should send an error if one occurs", ^{
