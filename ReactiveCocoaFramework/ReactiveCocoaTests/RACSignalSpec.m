@@ -874,7 +874,9 @@ describe(@"+combineLatestWith:", ^{
 		[subject1 sendNext:@"3"];
 		[subject2 sendNext:@"4"];
 			
-		expect(recorder).to.sendValuesIdentically(@[ RACTuplePack(@"1", @"2"), RACTuplePack(@"3", @"2"), RACTuplePack(@"3", @"4")]);
+		expect(recorder).to.sendValue(0, RACTuplePack(@"1", @"2"));
+		expect(recorder).to.sendValue(1, RACTuplePack(@"3", @"2"));
+		expect(recorder).to.sendValue(2, RACTuplePack(@"3", @"4"));
 	});
 	
 	it(@"should complete when only both signals complete", ^{
@@ -1454,24 +1456,31 @@ describe(@"+merge:", ^{
 	__block RACSubject *sub2;
 	__block RACSignal *merged;
 	beforeEach(^{
-		sub1 = [RACReplaySubject subject];
-		sub2 = [RACReplaySubject subject];
+		sub1 = [RACSubject subject];
+		sub2 = [RACSubject subject];
 		merged = [RACSignal merge:@[ sub1, sub2 ].objectEnumerator];
 	});
 
 	it(@"should send all values from both signals", ^{
+		NSMutableArray *values = [NSMutableArray array];
+		[merged subscribeNext:^(id x) {
+			[values addObject:x];
+		}];
+		
 		[sub1 sendNext:@1];
 		[sub2 sendNext:@2];
 		[sub2 sendNext:@3];
 		[sub1 sendNext:@4];
 
 		NSArray *expected = @[ @1, @2, @3, @4 ];
-		expect(merged).to.sendValues(expected);
+		expect(values).to.equal(expected);
 	});
 
 	it(@"should send an error if one occurs", ^{
+		LLSignalTestRecorder *recorder = [LLSignalTestRecorder recordWithSignal:merged];
 		[sub1 sendError:RACSignalTestError];
-		expect(merged).to.sendError(RACSignalTestError);
+		
+		expect(recorder).to.sendError(RACSignalTestError);
 	});
 
 	it(@"should complete only after both signals complete", ^{
